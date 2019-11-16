@@ -1,15 +1,13 @@
 "use strict";
 
-let recipeHeader = document.querySelector(".recipe-header.js");
+let recipeTitle = document.querySelector(".recipe-title");
 let product = document.querySelector(".data__cointainer");
-let totalPrice = document.querySelector(".total__price");
-let shipping = document.querySelector(".shipping__cost");
-
-const url =
-  "https://raw.githubusercontent.com/Adalab/recipes-data/master/rissoto-setas.json";
+let shipping = document.querySelector(".shipping-js");
 
 function getRecipe() {
-  return fetch(url)
+  const url =
+    "https://raw.githubusercontent.com/Adalab/recipes-data/master/rissoto-setas.json";
+  fetch(url)
     .then(response => response.json())
     .then(data => {
       let recipeInfo = data.recipe;
@@ -42,6 +40,8 @@ function getRecipe() {
           ingredient.items} €</p></div>`;
       }
       product.innerHTML = ingredientItem;
+      recipeTitle.innerHTML = recipeName;
+      shipping.innerHTML = `${shippingCost} ${currency}`;
     });
 }
 
