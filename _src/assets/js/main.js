@@ -26,22 +26,27 @@ function getRecipe() {
           brand = ingredient.brand;
         }
 
-        ingredientItem += `<div>  <input type="checkbox" value="${
+        ingredientItem += `<div class="items__list row">
+        
+        <div class="col-2">
+        <input type="checkbox" value="${
           ingredient.product
-        }" name="ingredients" class="col-1"/><input type="number" value="${
+        }" name="ingredients" class="checkbox"/><input type="number" value="${
           ingredient.item
-        }" class="input__number col-1"/>
-        <div class="col-3">
+        }" class="input__number"/>
+</div>
+
+        <div class="ingredient col-5">
         <p class="ingredient__name">${ingredient.product}</p>
         <p class="ingredient__brand">${brand}</p>
         <p class="ingredient__quantity">${ingredient.quantity}</p>
         </div>
-        <p class="ingredient__price col-6">${ingredient.price *
+        <p class="ingredient__price col-5">${ingredient.price *
           ingredient.items} €</p></div>`;
       }
       product.innerHTML = ingredientItem;
       recipeTitle.innerHTML = recipeName;
-      shipping.innerHTML = `${shippingCost} ${currency}`;
+      shipping.innerHTML = `<p class="total__price">${shippingCost} ${currency}</p>`;
     });
 }
 

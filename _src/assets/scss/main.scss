@@ -1,17 +1,109 @@
 @import "core/variables";
+@import "core/reset";
 @import "layouts/header";
 
-body {
+.main__container {
+  margin: 50px auto;
+  border: 1px solid lightgrey;
+  max-width: 665px;
+}
+
+.recipe__header {
+  border-bottom: 1px solid rgb(0, 119, 255);
+  padding: 30px 120px 0 120px;
+}
+
+.title {
   margin: 0;
-  height: 100vh;
+  font-family: serif;
+  font-weight: bold;
+}
+
+.subtitle {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: rgb(80, 80, 80);
+}
+
+.select__container {
+  margin-top: 30px;
+  display: flex;
+  color: rgb(0, 119, 255);
+}
+
+.select__text {
+  margin-bottom: 0;
+}
+
+.line {
+  padding: 0 10px;
+}
+
+.items__list {
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid lightgrey;
 }
 
 .input__number {
-  height: 35px;
-  width: 35px;
+  margin-left: 12px;
+  height: 50px;
+  width: 50px;
 }
 
-.container-fluid {
+.ingredient {
   padding: 0;
   margin: 0;
+
+  &__name {
+    margin: 0;
+    font-family: serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__brand {
+    margin: 0;
+    font-size: 14px;
+    color: grey;
+  }
+
+  &__quantity {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  &__price {
+    margin: 0;
+    text-align: right;
+    font-size: 24px;
+    color: green;
+  }
+}
+
+.column__container {
+  padding: 0 70px;
+}
+
+.total__price {
+  text-align: right;
+}
+
+.recipe__resume {
+  padding: 50px 0;
+}
+
+.button__box {
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.button {
+  padding: 10px;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(43, 155, 43);
 }
