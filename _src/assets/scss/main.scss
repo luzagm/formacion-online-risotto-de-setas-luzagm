@@ -1,8 +1,17 @@
-@import 'core/settings';
-@import 'core/links';
+@import "core/variables";
+@import "layouts/header";
 
 body {
-	background: url('../images/logo-adalab-80px.png') center center no-repeat $color-white;
-	margin: 0;
-	height: 100vh;
+  margin: 0;
+  height: 100vh;
+}
+
+.input__number {
+  height: 35px;
+  width: 35px;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
 }
