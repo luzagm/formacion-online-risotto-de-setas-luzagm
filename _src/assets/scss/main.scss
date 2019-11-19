@@ -86,12 +86,24 @@
   padding: 0 70px;
 }
 
+.recipe__resume {
+  padding: 50px 0;
+}
+
 .total__price {
   text-align: right;
 }
 
-.recipe__resume {
-  padding: 50px 0;
+.total__items {
+  text-align: right;
+}
+
+.subtotal {
+  text-align: right;
+}
+
+.shipping__cost {
+  text-align: right;
 }
 
 .button__box {

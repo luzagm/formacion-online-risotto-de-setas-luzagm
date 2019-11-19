@@ -3,34 +3,39 @@
     <div class="recipe__header">
       <h2 class="subtitle">Ingredientes</h2>
       <h1 class="title recipe-title"></h1>
-     <div class="select__container"> <p class="select__text">Seleccionar todo</p><span class="line">|</span> <p class="select__text">Deseleccionar todo</p></div>
+     <div class="select__container"> <p class="select__text selectAll-js">Seleccionar todo</p><span class="line">|</span> <p class="select__text deselectAll-js">Deseleccionar todo</p></div>
     </div>
 
     <form class="container-fluid data__cointainer"></form>
 
     <section class="container-fluid recipe__resume">
       <div>
+
         <div class="row column__container">
           <p class="col-10">Item:</p>
-          <p></p>
+         <span class="total__items totalitems-js col-2"></span>
         </div>
+
         <div class="row column__container">
           <p class="col-10">Subtotal</p>
-          <p></p>
+          <span class="subtotal subtotal-js col-2"></span>
         </div>
+
         <div class="row column__container">
           <p class="col-10">
             Gastos de envío
           </p>
-          <p class="shipping__cost shipping-js col-2"></p>
+          <span class="shipping__cost shipping-js col-2"></span>
         </div>
+
         <div class="row column__container">
           <p class="col-10">Total</p>
-    <!--       <p class="total__price"></p> -->
-        </div>
+          <span class="total__price totalPrice-js col-2"></span>
+          </div>
       </div>
+
       <div class="button__box row">
-        <button class="button col-9">Comprar ingredientes:</button>
+        <button class="button col-9">Comprar ingredientes: <span class="price button-price-js"></span></button>
         <p></p>
       </div>
     </section>
