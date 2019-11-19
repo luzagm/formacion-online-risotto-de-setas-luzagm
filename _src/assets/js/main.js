@@ -56,9 +56,7 @@ const paintRecipe = data => {
         <input type="checkbox" value="${
           ingredient.product
         }" name="ingredients" class="checkbox checkbox-js"/>
-        <input type="number" value="${
-          ingredient.item
-        }" class="input__number input-number-js"/>
+        <input type="number" value="1" min='1' class="input__number input-number-js"/>
         </div>
         <div class="ingredient col-5">
         <p class="ingredient__name">${ingredient.product}</p>
@@ -75,6 +73,22 @@ const paintRecipe = data => {
   getStartValues();
 };
 
+// const getingredientsPrice = event => {
+//   let ingredientPrice = {};
+//   const inputValue = parseFloat(event.target.value);
+//   const id = event.target.parentElement.parentElement.dataset.index;
+//   let price =
+//     event.target.parentElement.parentElement.lastElementChild.innerText;
+//   price = parseFloat(price.split("€")[0]);
+
+//   ingredientPrice = {
+//     price: inputValue * price,
+//     value: inputValue,
+//     id: id
+//   };
+//   addPriceToArray(ingredientPrice);
+// };
+
 const totalPrice = () => {
   let subtotalPrice = 0;
   for (let i = 0; i < totalIngredients.length; i++) {
@@ -86,6 +100,27 @@ const totalPrice = () => {
   }
   printPrices(subtotalPrice);
 };
+
+// const addPriceToArray = ingredientActualPrice => {
+//   let repeatedIngredient = ingredientsPrice.findIndex(
+//     ingredient => ingredient.id === ingredientActualPrice.id
+//   );
+//   if (ingredientsPrice.length === 0) {
+//     ingredientsPrice.push(ingredientActualPrice);
+//   } else {
+//     ingredientsPrice.splice(repeatedIngredient, 1);
+//     ingredientsPrice.push(ingredientActualPrice);
+//   }
+//   if (event.target.previousElementSibling.checked) {
+//     const repeatedIngredientToSum = totalIngredients.findIndex(
+//       ingredient => ingredient.id === ingredientActualPrice.id
+//     );
+//     totalIngredients.splice(repeatedIngredientToSum, 1);
+//     totalIngredients.push(ingredientActualPrice);
+//   }
+//   countTotalItems();
+//   totalPrice();
+// };
 
 const printPrices = subtotalPrice => {
   if (subtotalPrice > 0) {
@@ -107,6 +142,27 @@ const countTotalItems = () => {
   }
   items.innerHTML = totalItems;
 };
+
+// const addtotalIngredients = event => {
+//   const ingredientIdSelected =
+//     event.target.parentElement.parentElement.dataset.index;
+//   if (event.target.checked) {
+//     for (const ingredient of ingredientsPrice) {
+//       if (ingredient.id === ingredientIdSelected) {
+//         totalIngredients.push(ingredient);
+//       }
+//     }
+//   } else {
+//     let repeatedIngredient = totalIngredients.findIndex(
+//       ingredient => ingredient.id === ingredientIdSelected
+//     );
+//     if (repeatedIngredient >= 0) {
+//       totalIngredients.splice(repeatedIngredient, 1);
+//     }
+//   }
+//   countTotalItems();
+//   totalPrice();
+// };
 
 const selectAllFuntion = () => {
   debugger;
